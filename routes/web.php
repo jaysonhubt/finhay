@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('fund/crawlData', 'FundController@crawlData')->name('finhay.get_data');
+Route::get('fund/{id}', 'FundController@getFundPrice');
+
+Route::get('portfolio/{id}', 'PortfolioController@getPortfolioStructure');
